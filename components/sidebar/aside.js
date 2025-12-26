@@ -2,7 +2,7 @@ async function asideFunction() {
     const container = document.getElementById("aside-placeholder");
     if (!container) return;
     try {
-        const response = await fetch('/components/sidebar/aside.html');
+        const response = await fetch('components/sidebar/aside.html');
         const html = await response.text();
         container.innerHTML = html;
         initAside();

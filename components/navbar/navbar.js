@@ -3,7 +3,7 @@ async function navbarFunction(){
     if(!container)
         return;
     try{
-        const response = await fetch("/components/navbar/navbar.html");
+        const response = await fetch("components/navbar/navbar.html");
         const html = await response.text();
         container.innerHTML = html;
     }catch(err){

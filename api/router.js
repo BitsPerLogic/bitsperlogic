@@ -1,14 +1,14 @@
 const routes = {
-    '': { path: '/pages/home.html', title: 'Home | Bits Per Logic' },
-    '#/': { path: '/pages/home.html', title: 'Home | Bits Per Logic' },
-    '#/about': { path: '/pages/about.html', title: 'About | Bits Per Logic' },
-    '#/contact': { path: '/pages/contact.html', title: 'Contact | Bits Per Logic' },
-    '#/blog': { path: '/pages/blog.html', title: 'Blog | Bits Per Logic' }
+    '': { path: 'pages/home.html', title: 'Bits Per Logic' },
+    '#/': { path: 'pages/home.html', title: 'Bits Per Logic' },
+    '#/about': { path: 'pages/about.html', title: 'Bits Per Logic - About' },
+    '#/contact': { path: 'pages/contact.html', title: 'Bits Per Logic - Contact' },
+    '#/blog': { path: 'pages/blog.html', title: 'Bits Per Logic - Blog' }
 };
 
 async function handleRouting() {
     const hash = window.location.hash || '#/';
-    const route = routes[hash] || { path: '/pages/404.html', title: '404' };
+    const route = routes[hash] || { path: 'pages/404.html', title: '404' };
     document.title = route.title;
 
     try {
